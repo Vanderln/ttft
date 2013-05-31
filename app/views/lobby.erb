@@ -1,0 +1,6 @@
+<%=  @errors  %>
+
+<% Game.find_all_by_joiner(nil).each do |game| %>
+<p>Creator: <%= game.creator %></p><br>
+<a href="/game/<%=game.id%>/join">Join the game. mothafucka.</a>
+<% end %>

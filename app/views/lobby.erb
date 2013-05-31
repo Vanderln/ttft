@@ -1,4 +1,4 @@
-<%=  @errors  %>
+<%= @errors %>
 
 <% Game.find_all_by_joiner(nil).each do |game| %>
 <p>Creator: <%= game.creator %></p><br>

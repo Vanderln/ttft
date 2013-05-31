@@ -1,8 +1,15 @@
-<!-- get "/user/:user_id" do 
-  @user = User.find(params[:user_id])
-  erb :user
-end -->
 
 <h1><%=current_user.username%>'s Results, Muthfucka</h1>
 
-<%
+<ul>
+  <% current_user.created_games + current_user.joined_games.each do |game|
+  <li><%=game.id %>
+    <%if game.winner_id == current_user.id%>
+      You won, muthafucka!!
+    <%else%>
+      You lost, get yo bitch ass outta here, muthafucka!!
+    <%end%>
+  </li>
+ <%end%>
+</ul>
+

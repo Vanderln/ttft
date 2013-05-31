@@ -1,5 +1,9 @@
 get '/' do
-  erb :index
+  if current_user
+    redirect '/lobby'
+  else
+    erb :index
+  end
 end
 
 post "/login" do

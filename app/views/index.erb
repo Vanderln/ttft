@@ -1,3 +1,13 @@
-<h1>Hey trying some bootstrap</h1>
+<h3>Log in to your account</h3>
+<form name="login" method="POST" action="/login">
+  <label>Username: <input type="text" name="user[username]"></label>
+  <label>Password: <input type="password" name="user[password]"></label>
+  <button type="submit">LET'S PLAY SOME TTMFT,MF!</button>
+</form>
 
-<button class="btn btn-primary">Click Me</button>
+<h4>Create a new account</h4>
+<form name="signup" method="POST" action="/signup">
+  <label>Username: <input type="text" name="user[username]"></label>
+  <label>Password: <input type="password" name="user[password]"></label>
+  <button type="submit">MAKE ME AN ACCOUNT, YO</button>
+</form>

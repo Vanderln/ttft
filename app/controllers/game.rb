@@ -22,3 +22,9 @@ get "/game/:game_id/join" do
     erb :lobby
   end
 end
+
+post "/game/:game_id/update" do
+  @game = Game.find(params[:game_id])
+  @game.update_attributes(:board => params[:board], :turn_id => params[:turn_id])
+  erb :game
+end

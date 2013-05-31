@@ -7,3 +7,28 @@
 th {
   text-align: left;
 }
+
+h1.game_view, h2.game_view {
+  color: gray;
+  font-size: 90px;
+  text-align: center;
+}
+
+#gameboard {
+  margin: 0 40px;
+  width: 940px;
+  height: 940px;
+}
+
+#gameboard span {
+  border: solid 2px gray;
+  color: gray;
+  display: block;
+  float: left;
+  font-size: 300px;
+  font-weight: bold;
+  height: 280px;
+  line-height: 276px;
+  text-align: center;
+  width: 280px;
+}

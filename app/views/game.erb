@@ -1,4 +1,26 @@
-<%= @game.creator %>
-<%= @game.joiner %>
-<%= @game.board %>
+<h1 class="game_view"><%= @game.creator.username %></h1>
+<h2 class="game_view">Vs.</h2>
+<h1 class="game_view"><%= @game.joiner.username %></h1>
 
+<div id="gameboard">
+  <div id="row_1">
+    <span id="0"></span>
+    <span id="1"></span>
+    <span id="2"></span>
+  </div>
+  <div id="row_2">
+    <span id="3"></span>
+    <span id="4"></span>
+    <span id="5"></span>
+  </div>
+  <div id="row_3">
+    <span id="6"></span>
+    <span id="7"></span>
+    <span id="8"></span>
+  </div>
+</div>
+
+<div class="hidden current_turn">
+  <p><%= current_user.id %></p>
+  <p><%= @game.turn_id %></p>
+</div>

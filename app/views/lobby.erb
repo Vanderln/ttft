@@ -1,9 +1,9 @@
-<%= @errors %>
+<%= @error %>
 
-<% if Game.all != [] %>
-  <% Game.find_all_by_joiner(nil).each do |game| %>
-  <p>Creator: <%= game.creator %></p><br>
-  <a href="/game/<%=game.id%>/join">Join the game. mothafucka.</a>
+<% if @games != [] %>
+  <% @games.each do |g| %>
+  <p>Creator: <%= g.creator.username %></p>
+  <a href="/game/<%=g.id%>/join">Join the game. mothafucka.</a>
   <% end %>
 <% else %>
   <h4>No games are currently available.</h4>

@@ -1,4 +1,5 @@
 get '/' do
+  session[:error] = nil
   if current_user
     redirect '/lobby'
   else
@@ -37,4 +38,5 @@ end
 get "/logout" do
   User.find(current_user.id).update_attributes(:logged_in => false)
   session.clear
+  redirect "/"
 end

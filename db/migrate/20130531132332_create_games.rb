@@ -5,7 +5,7 @@ class CreateGames < ActiveRecord::Migration
       g.references :joiner
       g.integer :winner_id
       g.integer :turn_id
-      g.string :board
+      g.string :board, :default => ""
 
       g.timestamps
     end

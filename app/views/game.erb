@@ -1,6 +1,15 @@
-<h1 class="game_view"><%= @game.creator.username %></h1>
-<h2 class="game_view">Vs.</h2>
-<h1 class="game_view"><%= @game.joiner.username %></h1>
+<% if @game.joiner %>
+  <div id="game_header">
+    <h1 class="game_view"><%= @game.creator.username %></h1>
+    <h2 class="game_view">Vs.</h2>
+    <h1 class="game_view"><%= @game.joiner.username %></h1>
+  </div>
+
+<% else %>
+  <div id="game_header">
+    <h1 class="waiting_view">Waiting for another muthafucka...</h1>
+  </div>
+<% end %>
 
 <div id="gameboard">
   <div id="row_1">
@@ -18,9 +27,13 @@
     <span id="7"></span>
     <span id="8"></span>
   </div>
+
+  <div class="hidden current_turn">
+    <p id="current_user_id"><%= current_user.id %></p>
+    <p id="turn_id"><%= @game.turn_id %></p>
+    <p id="creator_id"><%= @game.creator.id %></p>
+    <p id="game_id"><%= @game.id %></p>
+  </div>
+
 </div>
 
-<div class="hidden current_turn">
-  <p><%= current_user.id %></p>
-  <p><%= @game.turn_id %></p>
-</div>

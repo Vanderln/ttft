@@ -14,6 +14,13 @@ h1.game_view, h2.game_view {
   text-align: center;
 }
 
+h1.waiting_view {
+  color: gray;
+  font-size: 60px;
+  line-height: 1.1em;
+  text-align: center;
+}
+
 #gameboard {
   margin: 0 40px;
   width: 940px;
